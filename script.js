@@ -1,3 +1,20 @@
+      var url = document.location.href;
+      var k = url.substr(url.lastIndexOf("k=")+2);
+    
+      if(k){
+        fetch(AS_URL_BASE+'?k='+k)
+        .then(r => r.text())
+        .then((r) => {
+          console.log(r);
+          //document.write(r);
+          if(r){
+            document.location.replace(r);
+          }
+        })
+        .catch(err => console.log(err))
+      }
+
+
 var qrcode = new QRCode("qrcode");
 var url = document.location.href;
 console.log(url);

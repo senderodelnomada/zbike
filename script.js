@@ -1,5 +1,4 @@
 var url = document.location.href;
-var loc = document.location.host;
 console.log(url);
 var k = url.lastIndexOf("k=")>0 ? url.substr(url.lastIndexOf("k=")+2) : "";
 
